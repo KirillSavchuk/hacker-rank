@@ -9,6 +9,10 @@ public class StringUtil {
 
 	private final static String DEFAULT_STRING_DIVIDER = " ";
 
+	public static List<List<Integer>> toIntMatrix(String... str) {
+		return Stream.of(str).map(StringUtil::toIntList).collect(Collectors.toList());
+	}
+
 	public static List<Integer> toIntList(String str) {
 		return Arrays.stream(toIntArray(str)).boxed().collect(Collectors.toList());
 	}
