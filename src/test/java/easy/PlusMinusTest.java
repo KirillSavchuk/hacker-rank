@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static util.StringUtil.toIntArray;
 
 class PlusMinusTest {
@@ -18,8 +18,8 @@ class PlusMinusTest {
 
 	@MethodSource
 	@ParameterizedTest
-	void test(int[] in, String out) {
-		assertThat(solver.apply(in)).isEqualTo(out);
+	void test(int[] array, String signProportions) {
+		assertEquals(signProportions, solver.apply(array));
 	}
 
 	private static Stream<Arguments> test() {

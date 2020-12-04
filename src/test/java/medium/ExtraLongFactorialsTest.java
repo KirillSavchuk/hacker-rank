@@ -10,6 +10,7 @@ import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ExtraLongFactorialsTest {
 
@@ -19,8 +20,8 @@ class ExtraLongFactorialsTest {
 
 	@MethodSource
 	@ParameterizedTest
-	void test(int in, String out) {
-		assertThat(solver.apply(in)).isEqualTo(out);
+	void test(int factorial, String result) {
+		assertEquals(result, solver.apply(factorial));
 	}
 
 	private static Stream<Arguments> test() {

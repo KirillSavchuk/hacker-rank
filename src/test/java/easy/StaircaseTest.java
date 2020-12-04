@@ -9,6 +9,7 @@ import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class StaircaseTest {
 
@@ -18,8 +19,8 @@ class StaircaseTest {
 
 	@MethodSource
 	@ParameterizedTest
-	void test(int in, String out) {
-		assertThat(solver.apply(in)).isEqualTo(out);
+	void test(int stairsCount, String stairsView) {
+		assertEquals(stairsView, solver.apply(stairsCount));
 	}
 
 	private static Stream<Arguments> test() {

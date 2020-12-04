@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static util.StringUtil.toIntArray;
 
 class SimpleArraySumTest {
@@ -18,8 +18,8 @@ class SimpleArraySumTest {
 
 	@MethodSource
 	@ParameterizedTest
-	void test(int[] in, int out) {
-		assertThat(solver.apply(in)).isEqualTo(out);
+	void test(int[] array, int sum) {
+		assertEquals(sum, solver.apply(array));
 	}
 
 	private static Stream<Arguments> test() {

@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static util.StringUtil.toLongArray;
 
 class VeryBigSumTest {
@@ -18,8 +18,8 @@ class VeryBigSumTest {
 
 	@MethodSource
 	@ParameterizedTest
-	void test(long[] in, long out) {
-		assertThat(solver.apply(in)).isEqualTo(out);
+	void test(long[] array, long sum) {
+		assertEquals(sum, solver.apply(array));
 	}
 
 	private static Stream<Arguments> test() {

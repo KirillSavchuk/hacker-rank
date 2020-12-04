@@ -8,8 +8,9 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static util.StringUtil.toIntList;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static util.ArrayUtil.asList;
+import static util.StringUtil.toIntArray;
 
 class BirthdayCakeCandlesTest {
 
@@ -19,14 +20,14 @@ class BirthdayCakeCandlesTest {
 
 	@MethodSource
 	@ParameterizedTest
-	void test(List<Integer> in, int out) {
-		assertThat(solver.apply(in)).isEqualTo(out);
+	void test(List<Integer> candleHeights, int tallestCandlesCount) {
+		assertEquals(tallestCandlesCount, solver.apply(candleHeights));
 	}
 
 	private static Stream<Arguments> test() {
 		return Stream.of(
-			Arguments.of(toIntList("3 2 1 3"), 2),
-			Arguments.of(toIntList("5 5 5 5"), 4)
+			Arguments.of(asList(toIntArray("3 2 1 3")), 2),
+			Arguments.of(asList(toIntArray("5 5 5 5")), 4)
 		);
 	}
 
