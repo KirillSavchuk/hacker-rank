@@ -5,8 +5,12 @@ import com.google.inject.Singleton;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Arrays;
-import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.joining;
+
+/**
+ * Problem source: https://www.hackerrank.com/challenges/plus-minus/problem
+ */
 @Singleton
 public class PlusMinus {
 
@@ -37,7 +41,7 @@ public class PlusMinus {
 		return Arrays.stream(signCount)
 			.mapToDouble(sign -> (double) sign / total)
 			.mapToObj(df::format)
-			.collect(Collectors.joining(" "));
+			.collect(joining(" "));
 	}
 
 }

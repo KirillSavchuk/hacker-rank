@@ -4,6 +4,9 @@ import com.google.inject.Singleton;
 
 import java.math.BigInteger;
 
+/**
+ * Problem source: https://www.hackerrank.com/challenges/extra-long-factorials/problem
+ */
 @Singleton
 public class ExtraLongFactorials {
 

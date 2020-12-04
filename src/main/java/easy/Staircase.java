@@ -2,9 +2,13 @@ package easy;
 
 import com.google.inject.Singleton;
 
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import static java.util.stream.Collectors.joining;
+
+/**
+ * Problem source: https://www.hackerrank.com/challenges/staircase/problem
+ */
 @Singleton
 public class Staircase {
 
@@ -20,7 +24,7 @@ public class Staircase {
 	protected String repeat(CharSequence symbols, int times) {
 		return IntStream.range(0, times)
 			.mapToObj(i -> symbols)
-			.collect(Collectors.joining());
+			.collect(joining());
 	}
 
 }

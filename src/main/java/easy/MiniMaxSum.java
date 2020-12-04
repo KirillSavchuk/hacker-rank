@@ -2,6 +2,9 @@ package easy;
 
 import com.google.inject.Singleton;
 
+/**
+ * Problem source: https://www.hackerrank.com/challenges/mini-max-sum/problem
+ */
 @Singleton
 public class MiniMaxSum {
 

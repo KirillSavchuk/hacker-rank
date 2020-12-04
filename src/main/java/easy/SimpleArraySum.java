@@ -4,6 +4,9 @@ import com.google.inject.Singleton;
 
 import java.util.Arrays;
 
+/**
+ * Problem source: https://www.hackerrank.com/challenges/simple-array-sum/problem
+ */
 @Singleton
 public class SimpleArraySum {
 

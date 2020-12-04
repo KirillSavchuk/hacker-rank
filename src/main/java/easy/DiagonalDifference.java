@@ -4,6 +4,9 @@ import com.google.inject.Singleton;
 
 import java.util.List;
 
+/**
+ * Problem source: https://www.hackerrank.com/challenges/diagonal-difference/problem
+ */
 @Singleton
 public class DiagonalDifference {
 
