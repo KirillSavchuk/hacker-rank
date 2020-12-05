@@ -2,9 +2,11 @@ package util;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toSet;
 
 public class ArrayUtil {
 
@@ -26,6 +28,10 @@ public class ArrayUtil {
 
 	public static List<String> asList(String[] arr) {
 		return Arrays.stream(arr).collect(toList());
+	}
+
+	public static Set<String> asSet(String[] arr) {
+		return Arrays.stream(arr).collect(toSet());
 	}
 
 }
