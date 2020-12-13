@@ -1,4 +1,4 @@
-package expert;
+package hard;
 
 import com.google.inject.Singleton;
 
